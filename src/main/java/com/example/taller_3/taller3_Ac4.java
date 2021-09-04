@@ -12,8 +12,7 @@ public class taller3_Ac4 extends AppCompatActivity {
 
     Button returnBtn;
 
-    TextView yourGrade;
-    private String gradeArgument;
+    TextView yourGrade, gradeArgument;
     String finalGrade, testString;
 
     @Override
@@ -22,7 +21,8 @@ public class taller3_Ac4 extends AppCompatActivity {
         setContentView(R.layout.activity_taller3_ac4);
 
         returnBtn = findViewById(R.id.returnButton);
-        yourGrade = (TextView)findViewById(R.id.gradeTextView);
+        yourGrade = findViewById(R.id.gradeTextView);
+        gradeArgument = (TextView)findViewById(R.id.textView8);
 
         testString = "test";
 
@@ -32,6 +32,11 @@ public class taller3_Ac4 extends AppCompatActivity {
                     moveToCalculateScreen();
                 }
         );
+
+        Intent nameInt = getIntent();
+        String userName = nameInt.getStringExtra("nameSave");
+
+        gradeArgument.setText("Hola, " + userName + ", tu nota es:");
 
         Intent i = getIntent();
         finalGrade = i.getStringExtra("nota final");

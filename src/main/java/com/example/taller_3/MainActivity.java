@@ -4,16 +4,20 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
     Button switchScreenBlue, switchScreenWhite, switchScreenBlack;
+    View view;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        view = this.getWindow().getDecorView();
 
         switchScreenBlue = findViewById(R.id.blueButton);
         switchScreenWhite = findViewById(R.id.whiteButton);
@@ -22,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         switchScreenBlue.setOnClickListener(
                 (view)->
                 {
+                    view.setBackgroundResource(R.color.blue);
                     moveToNextScreen();
                 }
 
@@ -30,12 +35,14 @@ public class MainActivity extends AppCompatActivity {
         switchScreenWhite.setOnClickListener(
                 (view)->
                 {
+                    view.setBackgroundResource(R.color.white);
                     moveToNextScreen();
                 }
         );
         switchScreenBlack.setOnClickListener(
                 (view)->
                 {
+                    view.setBackgroundResource(R.color.black);
                     moveToNextScreen();
                 }
         );
