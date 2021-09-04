@@ -4,11 +4,17 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class taller3_Ac4 extends AppCompatActivity {
 
     Button returnBtn;
+
+    TextView yourGrade;
+    private String gradeArgument;
+    String finalGrade, testString;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,6 +22,9 @@ public class taller3_Ac4 extends AppCompatActivity {
         setContentView(R.layout.activity_taller3_ac4);
 
         returnBtn = findViewById(R.id.returnButton);
+        yourGrade = (TextView)findViewById(R.id.gradeTextView);
+
+        testString = "test";
 
         returnBtn.setOnClickListener(
                 (view) ->
@@ -23,6 +32,18 @@ public class taller3_Ac4 extends AppCompatActivity {
                     moveToCalculateScreen();
                 }
         );
+
+        Intent i = getIntent();
+        finalGrade = i.getStringExtra("nota final");
+
+        yourGrade.setText(finalGrade);
+
+        //Log.d("tag", testString);
+    }
+
+    public void calculate()
+    {
+
     }
 
     public void moveToCalculateScreen()

@@ -24,6 +24,8 @@ public class MainActivity extends AppCompatActivity {
                 {
                     moveToNextScreen();
                 }
+
+                
         );
         switchScreenWhite.setOnClickListener(
                 (view)->

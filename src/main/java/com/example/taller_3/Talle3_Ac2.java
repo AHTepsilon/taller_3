@@ -5,10 +5,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 public class Talle3_Ac2 extends AppCompatActivity {
 
     Button configBtn, continueBtn;
+    EditText nameSpace;
+    String name;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +21,7 @@ public class Talle3_Ac2 extends AppCompatActivity {
 
         configBtn = findViewById(R.id.configButton);
         continueBtn = findViewById(R.id.continueButton);
+        nameSpace = findViewById(R.id.nameTextSpace);
 
         configBtn.setOnClickListener(
                 (view) ->
@@ -28,7 +33,12 @@ public class Talle3_Ac2 extends AppCompatActivity {
         continueBtn.setOnClickListener(
                 (view) ->
                 {
-                    moveToNextScreen();
+                    saveName();
+
+                    if(name != "hola")
+                    {
+                        moveToNextScreen();
+                    }
                 }
         );
     }
@@ -43,5 +53,10 @@ public class Talle3_Ac2 extends AppCompatActivity {
     {
         Intent switchActivityPrevious = new Intent(this, MainActivity.class);
         startActivity(switchActivityPrevious);
+    }
+
+    public void saveName()
+    {
+        name = nameSpace.getText().toString();
     }
 }

@@ -24,13 +24,13 @@
         app:layout_constraintVertical_bias="0.1" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/textSpacePP1"
         android:layout_width="253dp"
         android:layout_height="41dp"
         android:layout_marginStart="79dp"
         android:layout_marginEnd="79dp"
         android:ems="10"
-        android:hint="Poryecto Parcial 1"
+        android:hint="Proyecto Parcial 1"
         android:inputType="textPersonName"
         android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -41,7 +41,7 @@
         app:layout_constraintVertical_bias="0.208" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName3"
+        android:id="@+id/textSpacePP2"
         android:layout_width="253dp"
         android:layout_height="41dp"
         android:layout_marginStart="79dp"
@@ -58,7 +58,7 @@
         app:layout_constraintVertical_bias="0.313" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName4"
+        android:id="@+id/textSpaceQuiz"
         android:layout_width="253dp"
         android:layout_height="41dp"
         android:layout_marginStart="79dp"
@@ -75,7 +75,7 @@
         app:layout_constraintVertical_bias="0.405" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName6"
+        android:id="@+id/textSpaceP2"
         android:layout_width="253dp"
         android:layout_height="41dp"
         android:layout_marginStart="79dp"
@@ -92,7 +92,7 @@
         app:layout_constraintVertical_bias="0.595" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName5"
+        android:id="@+id/textSpaceP1"
         android:layout_width="253dp"
         android:layout_height="41dp"
         android:layout_marginStart="79dp"
